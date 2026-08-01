@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://redwinglabs.in/llms.txt
+notes: >-
+  Platform-provided Wix Site MCP endpoint for "Redwing Labs" (the marketing site
+  runs on Wix). Advertised in the site's own /llms.txt and verified live: a
+  POST tools/list to the endpoint returned HTTP 200 with the tool set below.
+  This is the Wix site-level agent-access surface, not a bespoke first-party
+  RedWing API. Generic site tools (business details, site search, docs lookup,
+  visitor-token + Wix REST call-through), gated behind a visitor session.
+server:
+  name: redwing-labs-site
+  transport: http
+  url: https://www.redwinglabs.in/_api/mcp
+  platform: wix-site-mcp
+  docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+tools:
+- name: GetBusinessDetails
+  description: Retrieve business/site details (timezone, email, phone, address, features).
+- name: SearchInSite
+  description: Search the site for information.
+- name: SearchSiteApiDocs
+  description: Retrieve API documentation for the Wix business solutions installed on the site.
+- name: GenerateVisitorToken
+  description: Create a visitor session and obtain a visitor access token.
+- name: CallWixSiteAPI
+  description: Call Wix site API methods on a visitor's behalf (query data, book, purchase).
+- name: ExecuteWixAPI
+  description: Run JavaScript against the Wix REST API on the visitor's behalf.
+- name: BrowseWixRESTDocsMenu
+  description: Browse the Wix REST API documentation menu hierarchy.
+- name: ReadFullDocsArticle
+  description: Fetch a complete article from the Wix developer documentation portal.
+- name: ReadFullDocsMethodSchema
+  description: Fetch the full request/response schema for a Wix API method.

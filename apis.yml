@@ -1,8 +1,28 @@
 aid: redwing-aerospace-laboratories
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redwing-aerospace-laboratories.png
 name: RedWing Aerospace Laboratories
-description: RedWing Aerospace Laboratories is a company surfaced as a portfolio company of techstars
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  RedWing Aerospace Laboratories (RedWing Labs, operated by Kitemaps AMS Pvt Ltd)
+  is a Bangalore, India based, Techstars-backed company that designs, develops and
+  deploys fully autonomous drones to transform logistics supply chains. It offers a
+  fleet of long-range, urban and medium-range delivery aircraft plus an operations
+  software suite, and runs an autonomous four-step delivery flow (order, handoff to
+  flight operations, proof of delivery, return to hub) used to move healthcare
+  products, food and other goods within the hour. The company reports operational
+  milestones including 145,930+ kilometers flown and thousands of deliveries
+  completed. RedWing does not publish a first-party developer API; its public agent
+  surface is the platform-provided Wix Site MCP endpoint advertised in its llms.txt.
 url: https://raw.githubusercontent.com/api-evangelist/redwing-aerospace-laboratories/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +32,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Drones
+- Drone Delivery
+- Logistics
+- Aerospace
+- Autonomous Vehicles
+- Healthcare Logistics
+- India
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +51,19 @@ maintainers:
 common:
 - type: Website
   url: https://redwinglabs.in/
+- type: Blog
+  url: https://www.redwinglabs.in/blog
+- type: PrivacyPolicy
+  url: https://drive.google.com/file/d/1qiVNuax6MUaMjBjXEEA3c-rPHytRcmLw/view?usp=share_link
+- type: MCPServer
+  name: RedWing Labs Site MCP (Wix)
+  url: mcp/redwing-aerospace-laboratories-mcp.yml
+- type: LLMsTxt
+  url: llms/redwing-aerospace-laboratories-llms.txt
+- type: DomainSecurity
+  url: security/redwing-aerospace-laboratories-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1
