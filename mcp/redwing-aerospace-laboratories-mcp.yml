@@ -2,13 +2,11 @@ generated: '2026-07-21'
 method: searched
 status: published
 source: https://redwinglabs.in/llms.txt
-notes: >-
-  Platform-provided Wix Site MCP endpoint for "Redwing Labs" (the marketing site
-  runs on Wix). Advertised in the site's own /llms.txt and verified live: a
-  POST tools/list to the endpoint returned HTTP 200 with the tool set below.
-  This is the Wix site-level agent-access surface, not a bespoke first-party
-  RedWing API. Generic site tools (business details, site search, docs lookup,
-  visitor-token + Wix REST call-through), gated behind a visitor session.
+notes: 'Platform-provided Wix Site MCP endpoint for "Redwing Labs" (the marketing site runs on Wix). Advertised
+  in the site''s own /llms.txt and verified live: a POST tools/list to the endpoint returned HTTP 200
+  with the tool set below. This is the Wix site-level agent-access surface, not a bespoke first-party
+  RedWing API. Generic site tools (business details, site search, docs lookup, visitor-token + Wix REST
+  call-through), gated behind a visitor session.'
 server:
   name: redwing-labs-site
   transport: http
@@ -34,3 +32,11 @@ tools:
   description: Fetch a complete article from the Wix developer documentation portal.
 - name: ReadFullDocsMethodSchema
   description: Fetch the full request/response schema for a Wix API method.
+deployment:
+  mode: remote
+  endpoint: https://www.redwinglabs.in/_api/mcp
+  verified: probed
+  probe: live
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
